@@ -4,23 +4,23 @@ import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
-    <div className="flex flex-col items-center p-8 bg-white text-black min-h-screen">
-              <h1 className="text-4xl font-bold mb-4">Paul Elisha</h1>
+    <div className="flex flex-col items-center p-4 md:p-8 bg-white text-black min-h-screen">
+              <h1 className="text-3xl md:text-4xl font-bold mb-4">Paul Elisha</h1>
 
-        <div className='flex'>
+        <div className='flex flex-col md:flex-row items-center md:items-start md:justify-center'>
 
       {/* Profile Image */}
-      <div className="mr-8">
+      <div className="w-48 h-48 md:w-64 md:h-auto mb-6 md:mb-0 md:mr-8">
         <img
           src="/src/assets/LLW_3833.jpg" // replace with the actual path to your image
           alt="Paul Elisha"
-          className="w-64 h-full rounded-lg object-cover"
+          className="w-full h-full rounded-lg object-cover"
         />
         
       </div>
 
       {/* About Text */}
-      <div className="max-w-3xl text-center text-lg leading-relaxed">
+      <div className="text-center md:text-left max-w-lg text-base md:text-lg leading-relaxed">
         <p className="mb-4">
         I am a Software Engineer with a background in computer science. <br /> I am currently an undergraduate of Miva Open University, <br /> pursuing a Bachelor's degree in <br />Software Engineering with a focus on Distributed Softwares.     
         </p>
