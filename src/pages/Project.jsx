@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Project = () => {
   return (
     <div className="p-4 md:p-6 max-w-4xl mx-auto">
-      <div className="text-2xl md:text-3xl text-center font-bold text-gray-800 mb-4">
+      <div className="text-2xl md:text-6xl text-center font-bold text-gray-800 mb-4">
         Projects
       </div>
 
