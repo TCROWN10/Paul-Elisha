@@ -31,7 +31,7 @@ const About = () => {
             Currently, I mainly work as a core smart contract engineer.
           </p>
           <p className="mb-4">
-            Another of many technical skill sets are Technical Research and{" "}
+            Another of many technical skill sets are Technical Research and
             <br />
             Technical Writing crafting API documentations, <br />
             and breaking down the workflow and architecture of protocols.

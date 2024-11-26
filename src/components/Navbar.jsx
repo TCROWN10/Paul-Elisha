@@ -1,12 +1,17 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
+
 function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isWalletConnected, setIsWalletConnected] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const handleWalletConnect = () => {
+    setIsWalletConnected(!isWalletConnected);
   };
 
   return (
@@ -44,9 +49,14 @@ function Navbar() {
             Projects
           </Link>
         </div>
-        <span className=" border md:flex hidden  border-b-4 border-gray-500 font-semibold bg-white text-xs py-1 px-3 rounded-lg cursor-pointer ">
-          CONNECT WALLET
-        </span>
+        <button
+          onClick={handleWalletConnect}
+          className={`border md:flex hidden border-b-4 border-gray-500 font-semibold bg-white text-xs py-1 px-3 rounded-lg cursor-pointer ${
+            isWalletConnected ? "bg-green-200 text-green-700" : ""
+          }`}
+        >
+          {isWalletConnected ? "CONNECTED" : "CONNECT WALLET"}
+        </button>
       </nav>
 
       {/* Mobile Menu */}
@@ -80,12 +90,14 @@ function Navbar() {
           >
             Projects
           </Link>
-          <Link
-            to="/meta"
-            className=" bg-gray-200 text-xs py-1 px-3 rounded-lg cursor-pointer font-semibold -ml-2 "
+          <button
+            onClick={handleWalletConnect}
+            className={`bg-gray-200 text-xs py-1 px-3 rounded-lg cursor-pointer font-semibold -ml-2 ${
+              isWalletConnected ? "bg-green-200 text-green-700" : ""
+            }`}
           >
-            CONNECT WALLET
-          </Link>
+            {isWalletConnected ? "CONNECTED" : "CONNECT WALLET"}
+          </button>
         </div>
       )}
     </div>
