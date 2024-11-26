@@ -109,15 +109,13 @@ const Project = () => {
               </h3>
               <p className="text-gray-600">{project.description}</p>
               <p className="flex items-center gap-x-1">
-                {project.stack.map((tech, index) => (
-                  <span
-                    key={index}
-                    className="w-2 h-2 rounded-full block bg-[#67FE5A] mr-1"
-                  >
-                    {tech}
-                  </span>
-                ))}
-                <a href={project.link}>Github Repo</a>
+                {project.stack.join(" | ")}
+                <a
+                  href={project.link}
+                  className="text-blue-600 hover:underline ml-2"
+                >
+                  Github Repo
+                </a>
               </p>
             </motion.div>
           ))}
